@@ -22,6 +22,7 @@ var carDetails = {
 */
 
 //Code Here
+let {color, make, model, year} = carDetails
 
 
 
@@ -36,6 +37,8 @@ var carDetails = {
 function greeting( obj ) {
   //Code Here
   
+let {firstName, lastName, title} = obj
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,6 +57,18 @@ function greeting( obj ) {
 */
 
 //Code Here
+// let totalPopulationObj = {
+//        utah: 1,
+//        california: 2,
+//        texas: 3,
+//        arizona: 4
+//     }
+
+function totalPopulation(object1){
+  let {utah, california, texas, arizona} = object1 
+}
+
+const {utah, california, texas, arizona} = object1
 
 
 
@@ -69,7 +84,20 @@ function greeting( obj ) {
 
 //Code Here
 
+let obj1 = {
+  carb: 'yummy',
+  fat: 'phatty',
+  protein: 'meatier'
+}
+let {carb, fat, protein} = obj1
 
+function ingredients(obj1){
+  carb = 'Bread'
+  fat = 'bacon'
+  protein = 'steak'
+
+
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -87,8 +115,24 @@ function greeting( obj ) {
 
 //Code Here
 
+const largeObj = {
+  first: 100,
+  second: 20,
+  third: 300,
+}
+const {first, second, third} = largeObj
 
+function largeNumbers(largeObj){
+  if(largeObj.first < largeObj.second && largeObj.third){
+    return largeObj.first
+  }else if(largeObj.second < largeObj.first && largeObj.third){
+    return largeObj.second
+  }else if(largeObj.third < largeObj.first && largeObj.second){
+    return largeObj.third
+  }
+}
 
+largeNumbers(largeObj)
 ////////// PROBLEM 6 //////////
 
 /*
@@ -99,4 +143,23 @@ function greeting( obj ) {
 
 //Code Here
 
+const deObj = {
+  a: [1, 2],
+  b: [3, 4, 5, 6],
+  c: [6, 7, 8]
+}
+
+let {a, b, c} = deObj
+
+function numberGroups(deObj){
+  if(deObj.a > deObj.b && deObj.c){
+    return deObj.a
+  }else if (deObj.b > deObj.a && deObj.c){
+    return deObj.b
+  }else if (deObj.c > deObj.a && deObj.b) {
+    return deObj.c
+  }
+}
+
+numberGroups(deObj)
 
